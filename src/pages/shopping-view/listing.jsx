@@ -79,7 +79,7 @@ function ShoppingListing() {
   }
 
   function handleGetProductDetails(getCurrentProductId) {
-    console.log(getCurrentProductId);
+    console.log(getCurrentProductId, "getCurrentProductId");
     dispatch(fetchProductDetails(getCurrentProductId));
   }
 
