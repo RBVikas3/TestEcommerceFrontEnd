@@ -20,7 +20,9 @@ jobs:
     needs: build
     runs-on: self-hosted
     steps:
-      - name: Pull image from docker hub
+      - name: Login to Docker hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: Pull image from Docker hub
         run:  docker pull vikas033/reactjs-app:latest
       - name: Delete old container
         run: docker rm -f reactjs-app-container
