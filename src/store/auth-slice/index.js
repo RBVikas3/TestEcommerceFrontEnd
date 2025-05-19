@@ -28,7 +28,7 @@ export const loginUser = createAsyncThunk(
 
   async (formData) => {
     const response = await axios.post(
-      "http://3.108.54.244/api/auth/login",
+      "http://3.108.54.244:5000/api/auth/login",
       formData,
       {
         withCredentials: true,
@@ -60,7 +60,7 @@ export const checkAuth = createAsyncThunk(
 
   async () => {
     const response = await axios.get(
-      "http://localhost:5000/api/auth/check-auth",
+      "http://3.108.54.244:5000/api/auth/check-auth",
       {
         withCredentials: true,
         headers: {
